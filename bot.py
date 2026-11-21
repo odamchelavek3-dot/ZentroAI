@@ -188,18 +188,6 @@ async def clear(update: Update, context: ContextTypes.DEFAULT_TYPE):
 # AI SUHBAT
 # =========================
 
-n
-
-
-
-
-    
-    if message == "ℹ️ Bot haqida":
-        await update.message.reply_text(
-            "ZENTRO AI 🤖\n"
-            "Gemini asosidagi aqlli yordamchi."
-        )
-        return
 async def chat(update: Update, context: ContextTypes.DEFAULT_TYPE):
     user_id = update.effective_user.id
     message = update.message.text
@@ -208,16 +196,20 @@ async def chat(update: Update, context: ContextTypes.DEFAULT_TYPE):
         await clear(update, context)
         return
 
-    
     if message == "👨‍💻 Seni kim yaratgan?":
         await update.message.reply_text(
             "🤖 Men ZENTRO AI botiman!\n\n"
             "👨‍💻 Meni @uz207z yaratgan! 🚀\n\n"
             "Sizga yordam berish uchun shu yerdaman!"
-             retur
         )
-        
-            
+        return
+
+    if message == "ℹ️ Bot haqida":
+        await update.message.reply_text(
+            "ZENTRO AI 🤖\n"
+            "Gemini asosidagi aqlli yordamchi."
+        )
+        return
 
     if message == "💬 AI bilan suhbat":
         await update.message.reply_text(
@@ -247,7 +239,6 @@ async def chat(update: Update, context: ContextTypes.DEFAULT_TYPE):
         await update.message.reply_text(
             "Kechirasiz, hozir texnik muammo yuz berdi."
         )
-
 
 # =========================
 # BOTNI ISHGA TUSHIRISH
