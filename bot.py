@@ -159,6 +159,7 @@ keyboard = ReplyKeyboardMarkup(
         ["👨‍💻 Seni kim yaratgan?"],
     ],
     resize_keyboard=True,
+    
 
 )
 
