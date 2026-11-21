@@ -156,8 +156,10 @@ keyboard = ReplyKeyboardMarkup(
         ["💬 AI bilan suhbat"],
         ["🧠 Xotirani tozalash"],
         ["ℹ️ Bot haqida"],
+        ["👨‍💻 Seni kim yaratgan?"],
     ],
     resize_keyboard=True,
+
 )
 
 
@@ -194,6 +196,19 @@ async def chat(update: Update, context: ContextTypes.DEFAULT_TYPE):
         await clear(update, context)
         return
 
+    
+    if message == "👨‍💻 Seni kim yaratgan?":
+        await update.message.reply_text(
+            "🤖 Men ZENTRO AI botiman!\n\n"
+            "👨‍💻 Meni @uz207z yaratgan! 🚀\n\n"
+            "Sizga yordam berish uchun shu yerdaman!"
+        )
+        return
+
+
+
+
+    
     if message == "ℹ️ Bot haqida":
         await update.message.reply_text(
             "ZENTRO AI 🤖\n"
